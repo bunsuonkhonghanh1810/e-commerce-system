@@ -1,8 +1,10 @@
 package com.DoDucMinhQuang.e_commerce_system.dto;
 
+import jakarta.persistence.Column;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -12,14 +14,17 @@ import java.time.LocalDateTime;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Getter
 @Setter
-public class CategoryDTO {
-
+public class ProductDTO {
+    
     Long id;
     String name;
+    String description;
     String notes;
-    String icon;
-    Long idParent;
-    Byte type;
+    String image;
+    Long idCategory;
+    String contents;
+    BigDecimal price;
+    Integer quatity;
     String slug;
     String metaTitle;
     String metaKeyword;
