@@ -21,19 +21,19 @@ import java.time.LocalDateTime;
 public class NewsCategoryEntity {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
-    @Column(name = "NAME", nullable = false, columnDefinition = "NVARCHAR(500)")
+    @Column(name = "NAME", columnDefinition = "NVARCHAR(500)")
     String name;
 
-    @Column(name = "NOTES", columnDefinition = "NTEXT")
+    @Column(name = "NOTES", columnDefinition = "NVARCHAR(MAX)")
     String notes;
 
     @Column(name = "ICON", columnDefinition = "NVARCHAR(250)")
     String icon;
 
-    @Column(name = "IDPARENT")
+    @Column(name = "IDPARENT", columnDefinition = "BIGINT")
     Long idParent;
 
     @Column(name = "SLUG", columnDefinition = "NVARCHAR(160)")
@@ -54,10 +54,10 @@ public class NewsCategoryEntity {
     @Column(name = "UPDATED_DATE", columnDefinition = "DATETIME DEFAULT GETDATE()")
     LocalDateTime updatedDate;
 
-    @Column(name = "CREATED_BY")
+    @Column(name = "CREATED_BY", columnDefinition = "BIGINT DEFAULT NULL")
     Long createdBy;
 
-    @Column(name = "UPDATED_BY")
+    @Column(name = "UPDATED_BY", columnDefinition = "BIGINT DEFAULT NULL")
     Long updatedBy;
 
     @Column(name = "ISDELETE", columnDefinition = "TINYINT DEFAULT 0")

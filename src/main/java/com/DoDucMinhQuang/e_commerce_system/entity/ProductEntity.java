@@ -23,32 +23,32 @@ import java.time.LocalDateTime;
 public class ProductEntity {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
-    @Column(name = "NAME", nullable = false, columnDefinition = "NVARCHAR(500)")
+    @Column(name = "NAME", columnDefinition = "NVARCHAR(500)")
     String name;
 
-    @Column(name = "DESCRIPTION", columnDefinition = "NTEXT")
+    @Column(name = "DESCRIPTION", columnDefinition = "NVARCHAR(MAX)")
     String description;
 
-    @Column(name = "NOTES", columnDefinition = "NTEXT")
+    @Column(name = "NOTES", columnDefinition = "NVARCHAR(MAX)")
     String notes;
 
     @Column(name = "IMAGE", columnDefinition = "NVARCHAR(550)")
     String image;
 
-    @Column(name = "IDCATEGORY")
+    @Column(name = "IDCATEGORY", columnDefinition = "BIGINT")
     Long idCategory;
 
-    @Column(name = "CONTENTS", columnDefinition = "NTEXT")
+    @Column(name = "CONTENTS", columnDefinition = "NVARCHAR(MAX)")
     String contents;
 
     @Column(name = "PRICE", columnDefinition = "DECIMAL DEFAULT 0")
     BigDecimal price;
 
-    @Column(name = "QUATITY", columnDefinition = "INT DEFAULT 0")
-    Integer quatity;
+    @Column(name = "QUANTITY", columnDefinition = "INT DEFAULT 0")
+    Integer quantity;
 
     @Column(name = "SLUG", columnDefinition = "NVARCHAR(160)")
     String slug;
@@ -68,10 +68,10 @@ public class ProductEntity {
     @Column(name = "UPDATED_DATE", columnDefinition = "DATETIME DEFAULT GETDATE()")
     LocalDateTime updatedDate;
 
-    @Column(name = "CREATED_BY")
+    @Column(name = "CREATED_BY", columnDefinition = "BIGINT DEFAULT NULL")
     Long createdBy;
 
-    @Column(name = "UPDATED_BY")
+    @Column(name = "UPDATED_BY", columnDefinition = "BIGINT DEFAULT NULL")
     Long updatedBy;
 
     @Column(name = "ISDELETE", columnDefinition = "TINYINT DEFAULT 0")

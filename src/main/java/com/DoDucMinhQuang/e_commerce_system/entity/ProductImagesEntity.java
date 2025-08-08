@@ -19,7 +19,7 @@ import lombok.experimental.FieldDefaults;
 public class ProductImagesEntity {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
     @Column(name = "NAME", columnDefinition = "NVARCHAR(250)")
@@ -28,7 +28,7 @@ public class ProductImagesEntity {
     @Column(name = "URLIMG", columnDefinition = "NVARCHAR(250)")
     String urlImg;
 
-    @Column(name = "IDPRODUCT")
+    @Column(name = "IDPRODUCT", columnDefinition = "BIGINT")
     Long idProduct;
 }
 

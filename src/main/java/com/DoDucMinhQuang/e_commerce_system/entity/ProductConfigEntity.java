@@ -19,15 +19,15 @@ import lombok.experimental.FieldDefaults;
 public class ProductConfigEntity {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
-    @Column(name = "IDPRODUCT")
+    @Column(name = "IDPRODUCT", columnDefinition = "BIGINT")
     Long idProduct;
 
-    @Column(name = "IDCONFIG")
+    @Column(name = "IDCONFIG", columnDefinition = "BIGINT")
     Long idConfig;
 
-    @Column(name = "VALUE", columnDefinition = "NTEXT")
+    @Column(name = "VALUE", columnDefinition = "NVARCHAR(MAX)")
     String value;
 }

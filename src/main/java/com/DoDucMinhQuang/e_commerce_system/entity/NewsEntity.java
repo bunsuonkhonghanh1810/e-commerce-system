@@ -23,7 +23,7 @@ public class NewsEntity {
     @Column(name = "NAME", columnDefinition = "NVARCHAR(500)")
     String name;
 
-    @Column(name = "DESCRIPTION", columnDefinition = "NTEXT")
+    @Column(name = "DESCRIPTION", columnDefinition = "NVARCHAR(MAX)")
     String description;
 
     @Column(name = "IMAGE", columnDefinition = "NVARCHAR(550)")
@@ -32,7 +32,7 @@ public class NewsEntity {
     @Column(name = "IDNEWSCATEGORY", columnDefinition = "BIGINT")
     Long idNewsCategory;
 
-    @Column(name = "CONTENTS", columnDefinition = "NTEXT")
+    @Column(name = "CONTENTS", columnDefinition = "NVARCHAR(MAX)")
     String contents;
 
     @Column(name = "TOTAL_VIEW", columnDefinition = "INT")

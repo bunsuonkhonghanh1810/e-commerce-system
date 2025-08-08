@@ -19,13 +19,13 @@ import lombok.experimental.FieldDefaults;
 public class ConfigurationsEntity {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
-    @Column(name = "NAME", nullable = false, columnDefinition = "NVARCHAR(500)")
+    @Column(name = "NAME", columnDefinition = "NVARCHAR(500)")
     String name;
 
-    @Column(name = "NOTES", columnDefinition = "NTEXT")
+    @Column(name = "NOTES", columnDefinition = "NVARCHAR(MAX)")
     String notes;
 
     @Column(name = "ISDELETE", columnDefinition = "TINYINT DEFAULT 0")

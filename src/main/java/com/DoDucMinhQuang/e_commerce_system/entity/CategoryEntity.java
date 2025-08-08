@@ -24,10 +24,10 @@ public class CategoryEntity {
     @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
-    @Column(name = "NAME", nullable = true, columnDefinition = "NVARCHAR(500)")
+    @Column(name = "NAME", columnDefinition = "NVARCHAR(500)")
     String name;
 
-    @Column(name = "NOTES", nullable = true, columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "NOTES", columnDefinition = "NVARCHAR(MAX)")
     String notes;
 
     @Column(name = "ICON", columnDefinition = "NVARCHAR(250)")
@@ -51,21 +51,21 @@ public class CategoryEntity {
     @Column(name = "META_DESCRIPTION", columnDefinition = "NVARCHAR(500)")
     String metaDescription;
 
-    @Column(name = "CREATED_DATE", nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    @Column(name = "CREATED_DATE", columnDefinition = "DATETIME DEFAULT GETDATE()")
     LocalDateTime createdDate;
 
-    @Column(name = "UPDATED_DATE", nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    @Column(name = "UPDATED_DATE", columnDefinition = "DATETIME DEFAULT GETDATE()")
     LocalDateTime updatedDate;
 
-    @Column(name = "CREATED_BY", columnDefinition = "BIGINT")
+    @Column(name = "CREATED_BY", columnDefinition = "BIGINT DEFAULT NULL")
     Long createdBy;
 
-    @Column(name = "UPDATED_BY", columnDefinition = "BIGINT")
+    @Column(name = "UPDATED_BY", columnDefinition = "BIGINT BIGINT DEFAULT NULL")
     Long updatedBy;
 
-    @Column(name = "ISDELETE", nullable = false, columnDefinition = "TINYINT DEFAULT 0")
+    @Column(name = "ISDELETE", columnDefinition = "TINYINT DEFAULT 0")
     Byte isDelete;
 
-    @Column(name = "ISACTIVE", nullable = false, columnDefinition = "TINYINT DEFAULT 1")
+    @Column(name = "ISACTIVE", columnDefinition = "TINYINT DEFAULT 1")
     Byte isActive;
 }

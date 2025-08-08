@@ -24,7 +24,7 @@ public class ProductDTO {
     Long idCategory;
     String contents;
     BigDecimal price;
-    Integer quatity;
+    Integer quantity;
     String slug;
     String metaTitle;
     String metaKeyword;
