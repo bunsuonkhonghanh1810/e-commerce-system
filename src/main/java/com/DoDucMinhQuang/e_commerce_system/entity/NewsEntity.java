@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 public class NewsEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", columnDefinition = "BIGINT")
     Long id;
 
